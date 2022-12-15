@@ -15,7 +15,7 @@ console.log('JS UTILITIES OK');
 */
 
 
-function IsEven (num){
+function isEven (num){
 
     if (isNaN(num) || !num){
         alert ('Valore non valido')

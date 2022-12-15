@@ -32,6 +32,28 @@
          </form> 
          <h2 id="board"></h2>  
     </section>
-    <section id="pari-dispari"></section>
+    <section id="pari-dispari">
+        <div class="container d-flex justify-content-around align-content-center">
+            <img src="img/paridispari.webp" alt="paridispari">
+            <form id="odd-even-form">
+                <h2 class="my-3">Sceglio il tuo segno</h2>
+                <select class="form-select" >
+                    <option value="even" selected>Pari</option>
+                    <option value="odd">Dispari</option>
+                  </select>
+                <h2 class="my-3">Scegli numero da buttare (da 1 a 5)</h2>
+                <input type="number" class="form-control my-3" id="user-number" min=1 max = 5 required>
+                <button type="submit" class="btn btn-primary" id="play">Gioca</button>
+                <button type="button" class="btn btn-danger" id="try-again">Riprova</button>
+            </form>
+        </div>
+        <div class="game-result bg-success w-100 my-5 container text-center">
+            <div class="row bg-success p-2">
+                <div class="col" id="player-throw"></div>
+                <div class="col" id="cpu-throw"></div>
+                <div class="col-12" id="winner"></div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

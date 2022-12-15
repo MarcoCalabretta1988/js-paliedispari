@@ -19,6 +19,12 @@ body{
     font-family: sans-serif;
 }
 
+section{
+    border: 2px solid rgb(45, 2, 124);
+    margin : 100px;
+    padding: 50px;
+    border-radius: 20px;
+}
 
 /*  SECTION PALINDROMO */
 
@@ -31,4 +37,14 @@ body{
    line-height: 150px;
    vertical-align: middle;
    font-weight: bold;
+}
+
+/*  SECTION ODD - EVEN */
+
+.col{
+    background-color: aqua;
+    height: 100px;
+    width: 100px;
+    padding : 20px;
+    border: 1px solid black;
 }

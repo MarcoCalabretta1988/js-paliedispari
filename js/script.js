@@ -17,7 +17,7 @@ const formElement = document.getElementById('pali-form');
 const board = document.getElementById('board');
 const userWord = document.getElementById('word-to-check');
 const resetButton = document.getElementById('reset');
-const checkButton = document.getElementById('pal-button')
+const checkButton = document.getElementById('pal-button');
 
 //Creo evento a pressione del bottone
 
@@ -30,11 +30,11 @@ const userWordElement = userWord.value.trim();
 // Validazione
 if(!isNaN(userWordElement)){
   board.innerText = 'I numeri non sono accetti';
-  board.classList.add('bg-danger');
-  checkButton.classList.add('disabled');
+  board.classList.add('bg-danger'); 
   return;
 }
 
+checkButton.classList.add('disabled');
 //Inverto parola
 const palindromeWord = reverseWord(userWordElement);
 
@@ -70,3 +70,50 @@ Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto.
 
 */
+
+//Prendo elementi dal DOM
+
+const oddEvenForm = document.getElementById('odd-even-form');
+const userNumber = document.getElementById('user-number');
+const userChoise = document.querySelector('select');
+const playButton = document.getElementById('play');
+const tryAgainButton = document.getElementById('try-again');
+const cpuThrow = document.getElementById('cpu-throw');
+const userThrow = document.getElementById('player-throw');
+const winner = document.getElementById('winner');
+
+
+
+oddEvenForm.addEventListener ('submit' , function(event){
+    event.preventDefault();
+   
+//recupero valori
+
+const userChoiseElement = userChoise.value.trim();
+const userNumberElement = parseInt(userNumber.value);
+
+//genero il tiro della cpu
+
+const cpuNumber = getRandomNumber(1,5);
+
+//sommo i valori 
+
+const result = cpuNumber + userNumberElement;
+
+const oddEvenResult = isEven(result) ? 'even' : 'odd';
+
+let message = '';
+
+if(userChoiseElement === oddEvenResult){
+   message = 'PLAYER';
+}
+else{
+    message = 'CPU';
+}
+
+
+
+cpuThrow.innerText = ` ${cpuNumber}`
+userThrow.innerText = ` ${userNumberElement }`
+winner.innerText = ` ${message} WINS!`
+});
