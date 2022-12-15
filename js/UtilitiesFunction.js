@@ -1,6 +1,6 @@
 // CHECK LINK OK
 
-console.log('JS OK');
+console.log('JS UTILITIES OK');
 
 // ! MY UTILITIES FUNCTION :
 /*
