@@ -112,8 +112,14 @@ else{
 }
 
 
+//STAMPO I RISULTATI
+cpuThrow.innerHTML =`
+ <h2>TIRO DELLA CPU</h2>
+ <img src="img/${cpuNumber}.jpg"> `;
 
-cpuThrow.innerText = ` ${cpuNumber}`
-userThrow.innerText = ` ${userNumberElement }`
-winner.innerText = ` ${message} WINS!`
+userThrow.innerHTML = `
+<h2>IL TUO TIRO</h2>
+<img src="img/${userNumberElement }.jpg"> `;
+
+winner.innerHTML = `<div class="fs-1 fw-bold my-5"> ${message} WINS!</div>`
 });

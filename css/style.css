@@ -42,8 +42,7 @@ section{
 /*  SECTION ODD - EVEN */
 
 .col{
-    background-color: aqua;
-    height: 100px;
+    min-height: 350px;
     width: 100px;
     padding : 20px;
     border: 1px solid black;
