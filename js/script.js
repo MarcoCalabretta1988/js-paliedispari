@@ -17,6 +17,7 @@ const formElement = document.getElementById('pali-form');
 const board = document.getElementById('board');
 const userWord = document.getElementById('word-to-check');
 const resetButton = document.getElementById('reset');
+const checkButton = document.getElementById('pal-button')
 
 //Creo evento a pressione del bottone
 
@@ -30,6 +31,7 @@ const userWordElement = userWord.value.trim();
 if(!isNaN(userWordElement)){
   board.innerText = 'I numeri non sono accetti';
   board.classList.add('bg-danger');
+  checkButton.classList.add('disabled');
   return;
 }
 
@@ -45,6 +47,7 @@ resetButton.addEventListener ('click' , function(){
     userWord.value = '';
     board.innerText = '';
     board.classList.remove('bg-danger');
+    checkButton.classList.remove('disabled');
 });
 
 
