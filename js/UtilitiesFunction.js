@@ -26,13 +26,13 @@ function isEven (num){
     return result;
 }
 
-function getRandomNumber (min = 1,max = 100, maxIncluted = true , minIncluted = true){
+function getRandomNumber (min = 1,max = 100, maxIncluted = true){
     if (min >= max){
         alert('Il minimo non può essere maggiore o uguale al massimo')
         return;
     }
    if (maxIncluted) max++;
-   if (minIncluted) min++;
+   
     let num = Math.floor(Math.random()*(max - min)) + min;
     return num;
 }

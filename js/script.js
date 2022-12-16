@@ -136,6 +136,6 @@ tryAgainButton.addEventListener ('click' , function(){
     winner.innerText = '';
     userNumber.value = ''; 
     userScore = 0;
-     cpuScore = 0;
+    cpuScore = 0;
    
 });
