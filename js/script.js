@@ -123,3 +123,11 @@ userThrow.innerHTML = `
 
 winner.innerHTML = `<div class="fs-1 fw-bold my-5"> ${message} WINS!</div>`
 });
+
+tryAgainButton.addEventListener ('click' , function(){
+    cpuThrow.innerText = '';
+    userThrow.innerText = '';
+    winner.innerText = '';
+    userNumber.value = ''; 
+   
+});
