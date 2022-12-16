@@ -83,6 +83,8 @@ const userThrow = document.getElementById('player-throw');
 const winner = document.getElementById('winner');
 
 
+let userScore = 0;
+let cpuScore = 0;
 
 oddEvenForm.addEventListener ('submit' , function(event){
     event.preventDefault();
@@ -106,20 +108,24 @@ let message = '';
 
 if(userChoiseElement === oddEvenResult){
    message = 'PLAYER';
+   userScore++;
 }
 else{
     message = 'CPU';
+    cpuScore++;
 }
 
 
 //STAMPO I RISULTATI
 cpuThrow.innerHTML =`
  <h2>TIRO DELLA CPU</h2>
- <img src="img/${cpuNumber}.jpg"> `;
+ <img src="img/${cpuNumber}.jpg">
+ <h3 class="text-danger fw-bold my-3">PUNTEGGIO CPU: ${cpuScore}</h3>`;
 
 userThrow.innerHTML = `
 <h2>IL TUO TIRO</h2>
-<img src="img/${userNumberElement }.jpg"> `;
+<img src="img/${userNumberElement }.jpg">
+<h3 class="text-success fw-bold my-3">TUO PUNTEGGIO:${userScore} </h3>`;
 
 winner.innerHTML = `<div class="fs-1 fw-bold my-5"> ${message} WINS!</div>`
 });
@@ -129,5 +135,7 @@ tryAgainButton.addEventListener ('click' , function(){
     userThrow.innerText = '';
     winner.innerText = '';
     userNumber.value = ''; 
+    userScore = 0;
+     cpuScore = 0;
    
 });
